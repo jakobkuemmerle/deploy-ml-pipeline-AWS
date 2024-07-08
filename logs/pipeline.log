@@ -1,0 +1,75 @@
+2024-05-16 18:23:34 root | pipeline_log.py:28 INFO     ========================================
+2024-05-16 18:23:34 root | pipeline_log.py:29 INFO     New logging session started
+2024-05-16 18:23:34 root | pipeline_log.py:30 INFO     ========================================
+2024-05-16 18:23:34 pipeline_logger | pipeline_log.py:61 INFO     Configuration file saved to artifacts directory.
+2024-05-16 18:23:35 src.acquire_data | acquire_data.py:54 INFO     Data acquired successfully from https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/taylor/cloud.data
+2024-05-16 18:23:35 src.acquire_data | acquire_data.py:21 INFO     Data written to runs/1715883814/clouds.data
+2024-05-16 18:23:35 pipeline_logger | pipeline_log.py:65 INFO     Data acquisition completed successfully.
+2024-05-16 18:23:35 src.create_dataset | create_dataset.py:46 DEBUG    Creating dataset from file: runs/1715883814/clouds.data
+2024-05-16 18:23:35 src.create_dataset | create_dataset.py:47 DEBUG    Columns used: ['visible_mean', 'visible_max', 'visible_min', 'visible_mean_distribution', 'visible_contrast', 'visible_entropy', 'visible_second_angular_momentum', 'IR_mean', 'IR_max', 'IR_min']
+2024-05-16 18:23:35 src.create_dataset | create_dataset.py:70 INFO     Dataset created.
+2024-05-16 18:23:35 src.create_dataset | create_dataset.py:71 DEBUG    Dataset created. Size: (2048, 11)
+2024-05-16 18:23:35 src.create_dataset | create_dataset.py:75 DEBUG    Class 0 count: 1024
+2024-05-16 18:23:35 src.create_dataset | create_dataset.py:76 DEBUG    Class 1 count: 1024
+2024-05-16 18:23:35 src.create_dataset | create_dataset.py:91 DEBUG    Saving dataset to path: runs/1715883814/clouds.csv
+2024-05-16 18:23:35 src.create_dataset | create_dataset.py:94 INFO     Dataset saved successfully.
+2024-05-16 18:23:35 pipeline_logger | pipeline_log.py:73 INFO     Dataset creation completed successfully.
+2024-05-16 18:23:35 src.generate_features | generate_features.py:87 DEBUG    Generating additional features from input data.
+2024-05-16 18:23:35 src.generate_features | generate_features.py:98 DEBUG    Calculating range features.
+2024-05-16 18:23:35 src.generate_features | generate_features.py:101 DEBUG    Calculating normalized range features.
+2024-05-16 18:23:35 src.generate_features | generate_features.py:117 DEBUG    Calculating normalized range feature.
+2024-05-16 18:23:35 src.generate_features | generate_features.py:104 DEBUG    Performing log transformation.
+2024-05-16 18:23:35 src.generate_features | generate_features.py:107 DEBUG    Performing multiplication of features.
+2024-05-16 18:23:35 src.generate_features | generate_features.py:112 INFO     Feature generation completed.
+2024-05-16 18:23:35 src.generate_features | generate_features.py:136 DEBUG    Saving enriched dataset to disk.
+2024-05-16 18:23:35 src.generate_features | generate_features.py:139 INFO     Dataset saved to runs/1715883814/enriched_clouds.csv
+2024-05-16 18:23:35 pipeline_logger | pipeline_log.py:78 INFO     Feature generation completed successfully.
+2024-05-16 18:23:35 src.analysis | analysis.py:29 DEBUG    Matplotlib defaults updated.
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-visible_mean.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-visible_max.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-visible_min.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-visible_mean_distribution.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-visible_contrast.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-visible_entropy.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-visible_second_angular_momentum.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-IR_mean.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-IR_max.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-IR_min.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-class.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-IR_range.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-IR_norm_range.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-log_visible_entropy.png
+2024-05-16 18:23:35 src.analysis | analysis.py:73 DEBUG    Figure saved: runs/1715883814/figures/2024-05-16-visible_contrast_x_visible_entropy.png
+2024-05-16 18:23:35 src.analysis | analysis.py:79 INFO     All figures saved successfully
+2024-05-16 18:23:35 pipeline_logger | pipeline_log.py:84 INFO     Exploratory data analysis completed successfully.
+2024-05-16 18:23:35 src.train_model | train_model.py:15 DEBUG    Splitting data into training and testing sets.
+2024-05-16 18:23:35 src.train_model | train_model.py:16 DEBUG    Test size: 0.400000.
+2024-05-16 18:23:35 src.train_model | train_model.py:18 INFO     Data split completed.
+2024-05-16 18:23:35 src.train_model | train_model.py:23 DEBUG    Training random forest classifier.
+2024-05-16 18:23:35 src.train_model | train_model.py:28 INFO     Training completed.
+2024-05-16 18:23:35 src.train_model | train_model.py:29 DEBUG    Training completed in 0.01 seconds.
+2024-05-16 18:23:35 src.train_model | train_model.py:32 DEBUG    Model specifications - n_estimators: 10, max_depth: 10.
+2024-05-16 18:23:35 src.train_model | train_model.py:53 DEBUG    Saving trained model to disk at runs/1715883814/trained_model_object.pkl.
+2024-05-16 18:23:35 src.train_model | train_model.py:55 INFO     Model saved.
+2024-05-16 18:23:35 src.train_model | train_model.py:81 DEBUG    Saving train and test datasets to disk.
+2024-05-16 18:23:36 src.train_model | train_model.py:88 INFO     Train and test datasets saved.
+2024-05-16 18:23:36 pipeline_logger | pipeline_log.py:95 INFO     Model training completed successfully.
+2024-05-16 18:23:36 src.score_model | score_model.py:21 DEBUG    Scoring the model on the test set.
+2024-05-16 18:23:36 src.score_model | score_model.py:26 INFO     Scoring completed.
+2024-05-16 18:23:36 src.score_model | score_model.py:27 DEBUG    Scoring completed in 0.00 seconds.
+2024-05-16 18:23:36 src.score_model | score_model.py:46 DEBUG    Saving model scores to runs/1715883814/scores.csv.
+2024-05-16 18:23:36 src.score_model | score_model.py:49 INFO     Scores saved.
+2024-05-16 18:23:36 pipeline_logger | pipeline_log.py:101 INFO     Model scoring completed successfully.
+2024-05-16 18:23:36 src.evaluate_performance | evaluate_performance.py:21 DEBUG    Evaluating model performance.
+2024-05-16 18:23:36 src.evaluate_performance | evaluate_performance.py:35 INFO     Model accuracy: 0.99%
+2024-05-16 18:23:36 src.evaluate_performance | evaluate_performance.py:50 DEBUG    Model performance evaluation completed in 0.00 seconds.
+2024-05-16 18:23:36 src.evaluate_performance | evaluate_performance.py:51 INFO     Model performance evaluation completed.
+2024-05-16 18:23:36 src.evaluate_performance | evaluate_performance.py:96 DEBUG    Saving evaluation metrics to runs/1715883814/metrics.yaml.
+2024-05-16 18:23:36 src.evaluate_performance | evaluate_performance.py:100 INFO     Evaluation metrics saved.
+2024-05-16 18:23:36 src.evaluate_performance | evaluate_performance.py:58 DEBUG    Creating Evaluation metrics bar chart.
+2024-05-16 18:23:36 src.evaluate_performance | evaluate_performance.py:84 INFO     Evaluation metrics bar chart saved at: runs/1715883814/metrics_bar_chart.png
+2024-05-16 18:23:36 pipeline_logger | pipeline_log.py:106 INFO     Model evaluation completed successfully.
+2024-05-16 18:23:36 pipeline_logger | pipeline_log.py:112 INFO     Log file copied to artifacts directory.
+2024-05-16 18:23:36 src.aws_utils | aws_utils.py:24 DEBUG    Uploading Artifacts to S3.
+2024-05-16 18:23:38 pipeline_logger | pipeline_log.py:118 INFO     Artifacts successfully uploaded to S3.
+2024-05-16 18:23:38 pipeline_logger | pipeline_log.py:120 INFO     Pipeline completed - logging end.

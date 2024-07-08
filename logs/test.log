@@ -1,0 +1,32 @@
+2024-05-16 18:23:42 root | test_generate_features.py:12 INFO     ========================================
+2024-05-16 18:23:42 root | test_generate_features.py:13 INFO     New test-logging session started
+2024-05-16 18:23:42 root | test_generate_features.py:14 INFO     ========================================
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:18 INFO     Test Starts
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:26 DEBUG    Creating sample data fixture
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:61 DEBUG    Creating feature configuration fixture
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:74 DEBUG    Running happy path test for expected columns
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:93 INFO     Happy path test for expected columns successful
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:26 DEBUG    Creating sample data fixture
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:100 DEBUG    Running unhappy path test for invalid feature
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:107 INFO     Unhappy path test for invalid feature successful
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:26 DEBUG    Creating sample data fixture
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:117 DEBUG    Running happy path test for calculate_norm_range
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:122 INFO     Happy path test for calculate_norm_range successful
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:26 DEBUG    Creating sample data fixture
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:129 DEBUG    Running unhappy path test for calculate_norm_range
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:141 INFO     Unhappy path test for calculate_norm_range successful
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:26 DEBUG    Creating sample data fixture
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:152 DEBUG    Creating feature configuration missing columns fixture
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:177 DEBUG    Running test for missing columns in generate_features
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:180 INFO     Test for missing columns in generate_features successful
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:43 DEBUG    Creating sample data 2 fixture
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:167 DEBUG    Creating feature configuration conflicting names fixture
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:187 INFO     Running test for conflicting names in generate_features
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:195 INFO     Test for conflicting names in generate_features successful
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:26 DEBUG    Creating sample data fixture
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:203 DEBUG    Creating log transformation feature configuration fixture
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:213 INFO     Running happy path test for log transformation in generate_features
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:218 INFO     Happy path test for log transformation in generate_features successful
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:26 DEBUG    Creating sample data fixture
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:228 DEBUG    Running unhappy path test for log transformation in generate_features
+2024-05-16 18:23:42 tests.test_generate_features | test_generate_features.py:236 INFO     Unhappy path test for log transformation in generate_features successful
