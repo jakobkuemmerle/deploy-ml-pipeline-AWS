@@ -1,0 +1,86 @@
+run_config:
+  name: random-forest-cloud-jakob
+  author: Jakob Kuemmerle (uhw4967)
+  version: default
+  description: Classifies clouds into one of two types.
+  dependencies: requirements.txt
+  data_source: https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/taylor/cloud.data
+
+data_acquisition:
+  url: https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/taylor/cloud.data
+  retries: 4
+  initial_wait: 3
+  wait_multiple: 2
+
+create_dataset:
+  columns:
+    - visible_mean
+    - visible_max
+    - visible_min
+    - visible_mean_distribution
+    - visible_contrast
+    - visible_entropy
+    - visible_second_angular_momentum
+    - IR_mean
+    - IR_max
+    - IR_min
+  class_indices:
+    - [53, 1077]  # Start and end indices for the first class
+    - [1082, 2106]  # Start and end indices for the second class
+
+generate_features:
+  calculate_range:
+    - IR
+  calculate_norm_range:
+    - IR
+  log_transform:
+    - visible_entropy
+  multiply:
+    - visible_contrast
+    - visible_entropy
+
+matplotlib_defaults:
+  font_size: 16
+  axes_color_cycle:
+    - '#0085ca'
+    - '#888b8d'
+    - '#00c389'
+    - '#f4364c'
+    - '#e56db1'
+  xtick_labelsize: 14
+  ytick_labelsize: 14
+  figure_size:
+    - 12.0
+    - 8.0
+  axes_labelsize: 20
+  axes_labelcolor: '#677385'
+  axes_titlesize: 20
+  lines_color: '#0055A7'
+  lines_linewidth: 3
+  text_color: '#677385'
+  font_family: 'sans-serif'
+  font_sans-serif: 'Tahoma'
+
+split_data:
+  test_size: 0.4
+
+train_model:
+  model_type: RandomForestClassifier
+  hyperparameters:
+    n_estimators: 10
+    max_depth: 10
+  selected_features:
+    - log_visible_entropy
+    - IR_norm_range
+    - visible_contrast_x_visible_entropy
+
+evaluate_performance:
+  - auc
+  - accuracy
+  - confusion_matrix
+  - classification_report
+
+aws:
+  upload: True
+  bucket_name: jakobbucketcloudhw2
+  prefix: hw2-cloud
