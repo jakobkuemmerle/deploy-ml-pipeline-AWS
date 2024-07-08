@@ -1,4 +1,4 @@
-# Assignment2: Cloud - Jakob Kuemmerle
+# Deploy Simple Machine Learning Use Case on AWS using Pipeline
 
 ### Use Case Description
 
