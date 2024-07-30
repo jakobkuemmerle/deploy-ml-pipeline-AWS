@@ -1,0 +1,6 @@
+aws:
+  s3_bucket: 'jakobbucketcloudhw2'
+  bucket_prefix: 'hw2-cloud/1715882684'
+  model_versions:
+    - 'jakobs_cool_model1.pkl'
+    - 'jakobs_cool_model2.pkl'
