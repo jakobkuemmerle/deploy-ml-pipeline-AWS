@@ -20,3 +20,12 @@ def prefix():
 @pytest.fixture
 def model_name():
     return "example_model.joblib"
+
+def test_fetch_model_from_s3_failure(mock_s3_client, bucket_name, prefix, model_name, caplog):
+    """Test to ensure None is returned on model loading failure."""
+    mock_s3_client.get_object.side_effect = Exception('Mocked S3 error')
+
+    model = fetch_model_from_s3(bucket_name, prefix, model_name)
+
+    assert model is None
+    assert "Failed to load model 'example_model.joblib' from S3" in caplog.text
