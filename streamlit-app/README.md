@@ -1,10 +1,14 @@
-# For Local
+# Streamlit App
+
+The user can select a model of their choice to predict the clouds in the data on s3.
+
+## For Local Deployment
 
 docker build --file dockerfile/Dockerfile --tag name .
 docker run  -v ~/.aws:/root/.aws -e AWS_PROFILE=profile -p 8501:8501 --name cloud_streamlit name
 
 
-# For AWS
+## For AWS Deployment
 
 - added --platform=linux/x86_64 to dockerfile
 
